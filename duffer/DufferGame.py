@@ -53,7 +53,7 @@ class DufferGame(Game):
 
     def getGameEnded(self, board, player):
         b = Board.from_array(board)
-        return -player if b.is_over() else 0
+        return -1 if b.is_over() else 0
 
     def getCanonicalForm(self, board, player):
         return board
