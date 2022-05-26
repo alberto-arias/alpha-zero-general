@@ -1,9 +1,8 @@
 import Arena
 from MCTS import MCTS
-from duffer.DufferGame import DufferGame
-from duffer.DufferPlayers import *
-from duffer.NNet import NNetWrapper as NNet
-
+from games.duffer.DufferGame import DufferGame
+from games.duffer.DufferPlayers import *
+from games.duffer.NNet import NNetWrapper as NNet
 
 import numpy as np
 from utils import *
@@ -21,8 +20,6 @@ g = DufferGame()
 rp = RandomPlayer(g).play
 gp = GreedyDufferPlayer(g).play
 hp = HumanDufferPlayer(g).play
-
-
 
 # nnet players
 n1 = NNet(g)

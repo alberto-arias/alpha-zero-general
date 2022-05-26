@@ -3,8 +3,8 @@ import logging
 import coloredlogs
 
 from Coach import Coach
-from duffer.DufferGame import DufferGame as Game
-from duffer.NNet import NNetWrapper as nn
+from games.duffer.DufferGame import DufferGame as Game
+from games.duffer.NNet import NNetWrapper as nn
 from utils import *
 
 log = logging.getLogger(__name__)

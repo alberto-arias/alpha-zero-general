@@ -2,7 +2,7 @@ import numpy as np
 import sys
 sys.path.append('..')
 from Game import Game
-from .DufferLogic import BaseBoard, Board, Move, SIDE
+from duffer import BaseBoard, Board, Move, SIDE
 
 class DufferGame(Game):
 

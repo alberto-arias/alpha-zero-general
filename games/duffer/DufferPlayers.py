@@ -1,5 +1,5 @@
 import numpy as np
-from .DufferLogic import BaseBoard, Board, Move, SIDE
+from duffer import BaseBoard, Board, Move, SIDE
 
 class RandomPlayer():
     def __init__(self, game):
