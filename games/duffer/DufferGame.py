@@ -75,13 +75,13 @@ class DufferGame(Game):
         pi_rotate180 = [0]*self.getActionSize()
         pi_rotate270 = [0]*self.getActionSize()
         for move in b.legal_moves():
-            pi_flip_vertical[self.getAction(move.flip_vertical())] = 1
-            pi_flip_horizontal[self.getAction(move.flip_horizontal())] = 1
-            pi_flip_diagonal_A1D4[self.getAction(move.flip_diagA1D4())] = 1
-            pi_flip_diagonal_A4D1[self.getAction(move.flip_diagA4D1())] = 1
-            pi_rotate90[self.getAction(move.rotate90())] = 1
-            pi_rotate180[self.getAction(move.rotate180())] = 1
-            pi_rotate270[self.getAction(move.rotate270())] = 1
+            pi_flip_vertical[self.getAction(move.flip_vertical())] = pi[self.getAction(move)]
+            pi_flip_horizontal[self.getAction(move.flip_horizontal())] = pi[self.getAction(move)]
+            pi_flip_diagonal_A1D4[self.getAction(move.flip_diagA1D4())] = pi[self.getAction(move)]
+            pi_flip_diagonal_A4D1[self.getAction(move.flip_diagA4D1())] = pi[self.getAction(move)]
+            pi_rotate90[self.getAction(move.rotate90())] = pi[self.getAction(move)]
+            pi_rotate180[self.getAction(move.rotate180())] = pi[self.getAction(move)]
+            pi_rotate270[self.getAction(move.rotate270())] = pi[self.getAction(move)]
         return [
             (np.array(board), pi),
             (np.array(board_flip_vertical.array_representation()), pi_flip_vertical),
